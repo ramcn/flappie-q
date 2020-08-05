@@ -1,0 +1,6 @@
+/home/chakenal/flappie_skeleton_working/build/CMakeFiles/flappie_unittest.dir
+/home/chakenal/flappie_skeleton_working/build/CMakeFiles/runnie.dir
+/home/chakenal/flappie_skeleton_working/build/CMakeFiles/test-verbose.dir
+/home/chakenal/flappie_skeleton_working/build/CMakeFiles/flappie.dir
+/home/chakenal/flappie_skeleton_working/build/CMakeFiles/flappie_static.dir
+/home/chakenal/flappie_skeleton_working/build/CMakeFiles/flappie_objects.dir
