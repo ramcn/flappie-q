@@ -409,26 +409,26 @@ flappie_matrix flipflop_guppy_transitions(const raw_table signal, float temperat
     raw_mat = free_flappie_matrix(raw_mat);
 
     /* enable this for quantization and clipping of GRU weights */
-    for(int i=0;i<net->gruB1_sW->nr;i++){
+    /*for(int i=0;i<net->gruB1_sW->nr;i++){
 	for(int j=0;j<net->gruB1_sW->nc;j++){
-	   	int x = (int) (*(net->gruB1_sW->data.f+(i*net->gruB1_sW->nr)+j) * 100);
+	   	char x = (char) (*(net->gruB1_sW->data.f+(i*net->gruB1_sW->nr)+j) * 100);
 	        if(x > 127) x = 127;
 	 	if(x < -127) x = -127;	
 	   	float y = ((float)x) / 100;
 	   	*(net->gruB1_sW->data.f+(i*net->gruB1_sW->nr)+j) = y;
  	}
-    } 
+    } */
 
     /* enable this for quantization and clipping of Linear FF weights */
-    /*for(int i=0;i<net->gruB1_iW->nr;i++){
+    for(int i=0;i<net->gruB1_iW->nr;i++){
 	for(int j=0;j<net->gruB1_iW->nc;j++){
-	   	int x = (int) (*(net->gruB1_iW->data.f+(i*net->gruB1_iW->nr)+j) * 100);
+	   	char x = (int) (*(net->gruB1_iW->data.f+(i*net->gruB1_iW->nr)+j) * 100);
 	        if(x > 127) x = 127;
 	 	if(x < -127) x = -127;	
 	   	float y = ((float)x) / 100;
 	   	*(net->gruB1_iW->data.f+(i*net->gruB1_iW->nr)+j) = y;
  	}
-    } */
+    } 
 
     //  First GRU layer
     flappie_matrix gruB1in = feedforward_linear(conv, net->gruB1_iW, net->gruB1_b, NULL);
